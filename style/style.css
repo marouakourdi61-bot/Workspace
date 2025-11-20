@@ -381,11 +381,20 @@
 
 .assigned-worker{
   border: solid 1px ;
-  width: 100px;
+  width: 90px;
   height: 50px;
   background-color: white;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anullworker{
+  background-color: red;
+  border: none;
+  
+  
 }
 
 

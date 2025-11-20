@@ -355,18 +355,20 @@ document.querySelectorAll(".card").forEach(card => {
 
         div.addEventListener("click", () => {
         const assignedWorker = document.createElement("div");
+        const buttonanullworker = document.createElement("button");
+        buttonanullworker.textContent = "x";
+        buttonanullworker.className = "anullworker";
         assignedWorker.className = "assigned-worker";
-        assignedWorker.textContent = w.dataset.nom +  " - " + w.dataset.role;
+        assignedWorker.textContent = w.dataset.nom + " - " + w.dataset.role;
 
-    
+        assignedWorker.appendChild(buttonanullworker);
         card.appendChild(assignedWorker);
+        
+            
     
         assing.style.display = "none";
 
-        
-
-        
-
+  
 
        });
 
