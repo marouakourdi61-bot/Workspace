@@ -72,10 +72,12 @@ btnajouter.addEventListener('click', () => {
   worker.innerHTML = `
       
       <button class="x">x</button>
-      <div>
-      <img src="${img || 'https://via.placeholder.com/80'}" class="photo">
-      <p class="name" ><strong>${nom}</strong></p>
-      <p class="name">${role}</p>
+      <div class= "photo-name">
+      <img src="${img || ''}" class="photo">
+      <div class = "name-role">
+      <p class="name" ><strong>${nom}</strong></p><br>
+      <p class="name">__ ${role}</p>
+      </div>
       </div>
       
   `;
@@ -177,7 +179,7 @@ document.querySelectorAll(".card").forEach(card => {
         const buttonanullworker = document.createElement("button");
         buttonanullworker.textContent = "x";
         buttonanullworker.className = "anullworker";
-        assignedWorker.className = "assigned-worker";
+        assignedWorker.className = "assigned-worker";                                       
         assignedWorker.textContent = w.dataset.nom + " - " + w.dataset.role;
 
         assignedWorker.appendChild(buttonanullworker);

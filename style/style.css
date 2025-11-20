@@ -346,10 +346,27 @@ display: none;
 
 
 
+.worker-card{
+  display: flex;
+}
+.photo-name{
+  display: flex;
+}
 
+.name-role{
+  display: flex;
+  margin-left: 20px;
+  
+}
 
 .worker-card:hover {
   background: #ddd;
+}
+
+.photo{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
 }
 
 .salle{
