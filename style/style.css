@@ -1,0 +1,391 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 25px;
+  background-color: gainsboro;
+  padding: 10px;
+}
+
+.container .box {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.box1 {
+  grid-column: 1 / span 4;
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2{
+    grid-column: 1 / span 1;
+    border-radius: 10px;
+    
+}
+.title{
+    text-align: start;
+}
+.Add{
+    width: 70%;
+    height: 50px;
+    background-color: rgb(44, 164, 44);
+    border-radius: 15px;
+    border: none;
+    color: white;
+}
+
+.box3{
+    grid-column:2 / span 3 ;
+    border-radius: 10px;
+    position: relative;
+    
+    
+}
+
+
+.box3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+#conference{
+    
+    background-image: url(/image/salle-conference.png);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#archives{
+  background-image: url(/image/salle-archife.png);
+  background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Réception{
+  background-image: url(/image/salle-reseption.png);
+  background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#personnel{
+  background-image: url(/image/salle_de_personelle.png);
+  background-repeat: no-repeat;
+  
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#serveurs{
+  background-image: url(/image/salle_des_seveur.png);
+  background-repeat: no-repeat;
+   background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#sécurité{
+  background-image: url(/image/salle_de_securité.png);
+    background-size: cover;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    border-radius: 16px;
+    padding: 20px;
+    height: 200px;
+    color: black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card.large {
+    grid-column: 1;
+   
+}
+
+
+.btn-add {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #20d66b;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #002;
+    border-radius: 8px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+    .box3{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card.large {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .box3 {
+        grid-template-columns: 1fr;
+    }
+    .card.large {
+        grid-column: span 1;
+    }
+}
+
+
+
+
+
+
+
+#formulaire {
+    
+  display: none;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.form-box {
+    
+  background: #fff;
+  width: 450px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-box input,
+.input-box select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.annuler {
+  background: #aaa;
+}
+
+.ajouter {
+  background: #20d66b;
+  color: white;
+}
+
+
+#staffList {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.worker-card {
+  padding: 10px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+
+  
+ 
+  
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.fiches {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+.fiche-box {
+  background: #ffffff;
+  width: 380px;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: left;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+  animation: fadeIn 0.25s ease-out;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.fiche-box h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+
+.fiche-box p {
+  font-size: 15px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f7f7f7;
+ 
+}
+
+
+.fiche-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px auto;
+  border: 3px solid #4a90e2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn.annuler {
+  width: 100%;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn.annuler:hover {
+  background: #c0392b;
+}
+
+
+
+
+
+
+.worker-card:hover {
+  background: #ddd;
+}
+
+.salle{
+  color: white;
+}
+
+
+.assing {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 2000;
+}
+
+.assign-box {
+  width: 250px;
+}
+
+.assign-list .worker-option {
+  padding: 8px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+
+.x{
+  background-color:red;
+  border: none;
+  width: 20px;
+  height: 20px;
+  
+}
+
+.name{
+  font-size: 20px;
+}
+
+.dive{
+  display: flex;
+}
+
+.assigned-worker{
+  border: solid 1px ;
+}
+
+
+
+
+
+
+
+
