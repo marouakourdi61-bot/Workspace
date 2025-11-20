@@ -184,6 +184,16 @@ document.querySelectorAll(".card").forEach(card => {
 
         assignedWorker.appendChild(buttonanullworker);
         card.appendChild(assignedWorker);
+
+
+        w.remove();
+            
+        
+        buttonanullworker.addEventListener("click", () => {
+          assignedWorker.remove();
+          
+          staffList.appendChild(w);
+        });
         
             
     
