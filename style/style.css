@@ -151,8 +151,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .card.large {
-        grid-column: span 2;
+        grid-column: span 1;
     }
+
 }
 
 @media (max-width: 600px) {
@@ -380,6 +381,11 @@
 
 .assigned-worker{
   border: solid 1px ;
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 5px;
 }
 
 
