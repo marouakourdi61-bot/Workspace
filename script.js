@@ -146,27 +146,27 @@ document.querySelectorAll(".card").forEach(card => {
         const salle = card.id;
         let autorise = false;
 
-
-        if (role === "Manager") {
+    if (role === "Manager") {
           autorise = true;
-        }
-        else if (role === "Réceptionniste") {
-          autorise = (salle === "Réception");
-        }
-        else if (role === "Technicien IT") {
-          autorise = (salle === "serveurs");
-        }
-        else if (role === "Agent de sécurité") {
-          autorise = (salle === "sécurité");
-        }
-        else if (role === "Nettoyage") {
-          autorise = (salle !== "archives");
-        }
-        else {
-          const sallesRest = ["Réception", "serveurs", "sécurité"];
-          autorise = !sallesRest.includes(salle);
-        }
-        if (!autorise) return;
+        } 
+      else if (role === "Réceptionniste") {
+      autorise = !(salle === "serveurs" || salle === "sécurité" || salle === "archives");
+       } 
+      else if (role === "Technicien IT") {
+      autorise = !(salle === "Réception" || salle === "sécurité" || salle === "serveurs" );
+      } 
+      else if (role === "Agent de sécurité") {
+      autorise = !(salle === "Réception" || salle === "serveurs");
+      } 
+      else if (role === "Nettoyage") {
+      autorise = (salle !== "archives");
+      } 
+      else {
+      const sallesNonAutorise = ["Réception", "serveurs", "sécurité"];
+      autorise = !sallesNonAutorise.includes(salle);
+      }
+
+      if (!autorise) return;
 
 
 
