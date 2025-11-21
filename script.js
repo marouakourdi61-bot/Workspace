@@ -13,6 +13,18 @@ const closeAssign = document.getElementById("closeAssign");
 const fiche = document.getElementById("fiche");
 const closeFiche = document.getElementById("closeFiche");
 
+const limit = {
+  Réception: 2,
+  archives: 2,
+  personnel: 10,
+  serveurs: 2,
+  conference: 5,
+  sécurité: 1,
+};
+
+
+
+
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);   
 }
@@ -175,6 +187,20 @@ document.querySelectorAll(".card").forEach(card => {
         div.textContent = w.dataset.nom + " - " + w.dataset.role;
 
         div.addEventListener("click", () => {
+         
+
+          
+        const salle = card.id;
+        const assignedCount = card.querySelectorAll(".assigned-worker").length;
+
+       if (limit[salle] !== undefined && assignedCount >= limit[salle]) {
+         alert("Cette salle a atteint la capacité maximale");
+        return;
+         }
+
+
+
+
         const assignedWorker = document.createElement("div");
         const buttonanullworker = document.createElement("button");
         buttonanullworker.textContent = "x";
