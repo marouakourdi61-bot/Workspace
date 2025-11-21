@@ -56,7 +56,7 @@
 
 #conference{
     
-    background-image: url(image/salle-conference.avif);
+    background-image: url(../image/salle-conference.avif);
     background-repeat: no-repeat;
     
     background-size: cover;
