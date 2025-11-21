@@ -56,7 +56,7 @@
 
 #conference{
     
-    background-image: url(/image/salle-conference.avif);
+    background-image: url(image/salle-conference.avif);
     background-repeat: no-repeat;
     
     background-size: cover;
@@ -65,7 +65,7 @@
     align-items: center;
 }
 #archives{
-  background-image: url(/image/salle-archife.avif);
+  background-image: url(../image/salle-archife.avif);
   background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -74,7 +74,7 @@
 }
 
 #Réception{
-  background-image: url(/image/salle-reseption.avif);
+  background-image: url(../image/salle-reseption.avif);
   background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -83,7 +83,7 @@
 }
 
 #personnel{
-  background-image: url(/image/salle_de_personelle.avif);
+  background-image: url(../image/salle_de_personelle.avif);
   background-repeat: no-repeat;
   
     background-size: cover;
@@ -92,7 +92,7 @@
     align-items: center;
 }
 #serveurs{
-  background-image: url(/image/salle_des_seveur.avif);
+  background-image: url(../image/salle_des_seveur.avif);
   background-repeat: no-repeat;
    background-size: cover;
     display: flex;
