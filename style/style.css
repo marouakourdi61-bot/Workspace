@@ -102,7 +102,7 @@
 
 
 #sécurité{
-  background-image: url(/image/salle_de_securité.avif);
+  background-image: url(../image/salle_de_securité.avif);
     background-size: cover;
    
     display: flex;
