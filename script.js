@@ -216,6 +216,31 @@ document.querySelectorAll(".card").forEach(card => {
   });
 
 
+  function rougeRooms() {
+    document.querySelectorAll(".card").forEach(card => {
+        const salleId = card.id;
+
+        
+        const sallesNeutres = ["conference", "personnel"];
+
+        if (sallesNeutres.includes(salleId)) {
+            card.classList.remove("rouge");
+            return;
+        }
+
+        
+        const assigned = card.querySelectorAll(".assigned-worker");
+        if (assigned.length === 0) {
+            card.classList.add("rouge");
+        } else {
+            card.classList.remove("rouge");
+        }
+    });
+}
+
+setInterval(rougeRooms, 1000);
+
+  
 
 
 
