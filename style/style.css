@@ -118,7 +118,7 @@
     color: black;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     display: flex;
-    flex-direction: column;
+    
     justify-content: space-between;
     transition: all 0.3s ease;
     
@@ -293,6 +293,12 @@
   cursor: pointer;
 }
 
+.worker-img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
 .fiches {
   display: none;
   position: fixed;
@@ -442,12 +448,14 @@
 .assigned-worker{
   border: solid 1px ;
   width: 90px;
-  height: 50px;
+  height: 90px;
   background-color: white;
   font-size: 15px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  
+  align-items: center;
 }
 
 .assigned-worker:hover {

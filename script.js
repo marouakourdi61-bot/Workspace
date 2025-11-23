@@ -91,6 +91,7 @@ btnajouter.addEventListener('click', () => {
       <p class="name">__ ${role}</p>
       </div>
       </div>
+
       
   `;
 
@@ -202,12 +203,28 @@ document.querySelectorAll(".card").forEach(card => {
 
 
         const assignedWorker = document.createElement("div");
+        const img = document.createElement("img");
         const buttonanullworker = document.createElement("button");
+
+        
+
         buttonanullworker.textContent = "x";
         buttonanullworker.className = "anullworker";
-        assignedWorker.className = "assigned-worker";                                       
-        assignedWorker.textContent = w.dataset.nom + " - " + w.dataset.role;
+        
 
+        img.src = w.dataset.img;        
+        img.className = "worker-img";   
+        
+        
+      
+
+        assignedWorker.className = "assigned-worker";
+        
+        
+        
+        assignedWorker.textContent = w.dataset.nom + " - " + w.dataset.role;
+        
+        assignedWorker.appendChild(img);
         assignedWorker.appendChild(buttonanullworker);
         card.appendChild(assignedWorker);
 
