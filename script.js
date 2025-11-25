@@ -54,11 +54,11 @@ btnajouter.addEventListener('click', () => {
   const exp   = document.getElementById('inp_exp').value.trim();
   const local = document.getElementById('inp_local').value.trim();
 
-  
-  if (!validateEmail(email.value)) {
-        email.style.border = '2px solid red';
-        return;
-  } else {
+ if (!validateEmail(email.value)) {
+    email.style.border = '2px solid red';
+    return;
+}
+   else {
         email.style.border = "";
   }
 
@@ -66,7 +66,7 @@ btnajouter.addEventListener('click', () => {
         tel.style.border = '2px solid red';
         return;
   } else {
-        tel.style.border = "";
+        tel.style.border = "";0
   }
 
 
@@ -284,8 +284,6 @@ document.querySelectorAll(".card").forEach(card => {
 setInterval(rougeRooms, 1000);
 
   
-
-
 
 
 
